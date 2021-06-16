@@ -15,13 +15,14 @@ html {
 }
 
 body {
-  background-color: #040714;
-  color: #f9f9f9;
+  /* background-color: #040714; */
+  background-color: rgba(77, 122, 165, 0.17);
+  /* color: #f9f9f9; */
   font-family: Avenir-Roman, sans-serif;
 }
 
 a {
-  color: #f9f9f9;
+  /* color: #f9f9f9; */
   text-decoration: none;
 }
 
@@ -41,4 +42,19 @@ a {
   body {
     font-size: 0.8rem;
   }
+}
+
+.App {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  /* background-color: #dadbd3; */
+}
+
+.app-body {
+  display: flex;
+  height: 95vh;
+  width: 95vw;
+  background: #ededed;
+  box-shadow: -1px 4px 20px -6px rgb(0, 0, 0, 0.75);
 }

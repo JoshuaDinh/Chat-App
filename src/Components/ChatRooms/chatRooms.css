@@ -1,0 +1,19 @@
+.chatRooms {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid rgba(77, 122, 165, 0.17);
+}
+
+.chatRooms:hover {
+  background-color: rgba(77, 122, 165, 0.17);
+  cursor: pointer;
+}
+
+.chatRooms-info {
+  margin-left: 15px;
+}
+
+.chatRooms-info > p {
+  font-size: 0.8rem;
+}

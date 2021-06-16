@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from "./Components/Login/Login";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import Chat from "./Components/Chat/Chat";
 
 const App = () => {
   return (
@@ -8,7 +9,10 @@ const App = () => {
       <Switch>
         <Route path="/">
           <div className="App">
-            <Login />
+            <div className="app-body">
+              <Sidebar />
+              <Chat />
+            </div>
           </div>
         </Route>
       </Switch>
