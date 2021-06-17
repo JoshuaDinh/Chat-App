@@ -69,6 +69,12 @@
 }
 
 .chat-input > .icon {
-  color: grey;
+  color: rgb(128, 128, 128);
   margin: 0 15px;
+}
+
+.chat-input > .icon:hover {
+  color: rgba(27, 53, 78, 0.966);
+  margin: 0 15px;
+  cursor: pointer;
 }

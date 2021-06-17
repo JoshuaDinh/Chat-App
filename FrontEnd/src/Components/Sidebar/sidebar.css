@@ -72,6 +72,5 @@
 }
 .sidebar-add-chat > button:hover {
   background: rgba(77, 122, 165, 0.17);
-
   transform: scale(1.25);
 }
