@@ -7,6 +7,7 @@ import {
   SearchOutlined,
 } from "@material-ui/icons";
 import IconButton from "@material-ui/core/IconButton";
+import ChatMessage from "../ChatMessage/ChatMessage";
 
 const Chat = () => {
   return (
@@ -32,10 +33,7 @@ const Chat = () => {
       </div>
 
       <div className="chat-body">
-        <div className="chat-message">
-          <span className="chat-name">josh</span>this is a message
-          <span className="chat-timestamp">{new Date().toUTCString()}</span>
-        </div>
+        <ChatMessage />
       </div>
     </div>
   );

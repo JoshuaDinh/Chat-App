@@ -14,10 +14,6 @@ html {
   box-sizing: inherit;
 }
 
-span {
-  color: black;
-}
-
 body {
   /* background-color: #040714; */
   background-color: rgba(77, 122, 165, 0.17);
@@ -57,8 +53,8 @@ a {
 
 .app-body {
   display: flex;
-  height: 95vh;
-  width: 95vw;
+  height: 90vh;
+  width: 90vw;
   background: #ededed;
   box-shadow: -1px 4px 20px -6px rgb(0, 0, 0, 0.75);
 }

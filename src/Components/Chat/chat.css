@@ -39,7 +39,7 @@
 
 .chat-body {
   flex: 1;
-  margin-top: 30px;
+  overflow-y: scroll;
   /* background: url("https://cdn.pixabay.com/photo/2017/06/13/13/51/marble-2398946_960_720.jpg")
     center no-repeat;
   background-size: cover;
@@ -51,26 +51,4 @@
       #ffffff 17px
     ),
     repeating-linear-gradient(#4d7aa555, #4d7aa5); */
-}
-
-.chat-message {
-  position: relative;
-  width: fit-content;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: rgba(77, 122, 165, 0.17);
-  font-size: 1rem;
-}
-
-.chat-timestamp {
-  margin-left: 10px;
-  font-size: xx-small;
-}
-
-.chat-name {
-  position: absolute;
-  top: -15px;
-  margin-left: 10px;
-  font-size: xx-small;
-  font-weight: 800;
 }
