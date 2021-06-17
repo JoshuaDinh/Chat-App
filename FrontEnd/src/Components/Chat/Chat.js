@@ -3,9 +3,11 @@ import "./chat.css";
 import Avatar from "@material-ui/core/Avatar";
 import {
   AttachFile,
+  InsertEmoticon,
   MoreVertOutlined,
   SearchOutlined,
 } from "@material-ui/icons";
+import MicIcon from "@material-ui/icons/Mic";
 import IconButton from "@material-ui/core/IconButton";
 import ChatMessage from "../ChatMessage/ChatMessage";
 
@@ -34,6 +36,15 @@ const Chat = () => {
 
       <div className="chat-body">
         <ChatMessage />
+      </div>
+
+      <div className="chat-input">
+        <InsertEmoticon className="icon" />
+        <form>
+          <input type="text" />
+          <button type="submit">Send a message</button>
+        </form>
+        <MicIcon className="icon" />
       </div>
     </div>
   );

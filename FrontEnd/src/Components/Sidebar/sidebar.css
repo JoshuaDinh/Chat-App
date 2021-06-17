@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(77, 122, 165, 0.966);
+  background-color: rgba(27, 53, 78, 0.966);
   padding: 20px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .sidebar-search-container > .icon {
-  color: rgba(77, 122, 165, 0.966);
+  color: rgba(27, 53, 78, 0.966);
   font-size: 2.2rem !important;
   margin: 0 15px;
 }
@@ -49,7 +49,29 @@
   outline: none;
 }
 
-.sidebar-chats > h2 {
-  margin: 20px 0;
-  text-align: center;
+.sidebar-add-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-add-chat > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  border: 2px solid rgba(27, 53, 78, 0.966);
+  color: rgba(27, 53, 78, 0.966);
+  transition: 0.3s ease-out;
+  margin: 25px 0;
+  cursor: pointer;
+}
+
+.sidebar-add-icon {
+  font-size: 2rem !important;
+}
+.sidebar-add-chat > button:hover {
+  background: rgba(77, 122, 165, 0.17);
+
+  transform: scale(1.25);
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sidebar.css";
 import ChatRooms from "../ChatRooms/ChatRooms";
 import SearchIcon from "@material-ui/icons/Search";
@@ -7,8 +7,10 @@ import IconButton from "@material-ui/core/IconButton";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import AddIcon from "@material-ui/icons/Add";
 
 const Sidebar = () => {
+  const [addChatIcon, setAddChatIcon] = useState(false);
   return (
     <div className="sidebar">
       <div className="sidebar-header">
@@ -34,7 +36,14 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar-chats">
-        <h2>Add new chat</h2>
+        <div className="sidebar-add-chat">
+          <button
+            onMouseEnter={() => setAddChatIcon(!addChatIcon)}
+            onMouseLeave={() => setAddChatIcon(!addChatIcon)}
+          >
+            <AddIcon className="sidebar-add-icon" />
+          </button>
+        </div>
         <ChatRooms roomName="random room" />
         <ChatRooms roomName="random room1" />
         <ChatRooms roomName="random room2" />

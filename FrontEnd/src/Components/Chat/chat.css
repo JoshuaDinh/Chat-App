@@ -33,22 +33,42 @@
 }
 
 .chat-icons {
-  color: rgba(77, 122, 165, 0.966);
+  color: rgba(27, 53, 78, 0.966);
   font-size: 2rem !important;
 }
 
 .chat-body {
   flex: 1;
   overflow-y: scroll;
-  /* background: url("https://cdn.pixabay.com/photo/2017/06/13/13/51/marble-2398946_960_720.jpg")
-    center no-repeat;
-  background-size: cover;
-  background-color: #ffffff; */
-  /* opacity: 0.15;
-  background-image: repeating-radial-gradient(
-      circle at 0 0,
-      transparent 0,
-      #ffffff 17px
-    ),
-    repeating-linear-gradient(#4d7aa555, #4d7aa5); */
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid rgba(77, 122, 165, 0.17);
+  height: 8%;
+}
+
+.chat-input > form {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.chat-input > form > input {
+  flex: 0.85;
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-input > form > button {
+  display: none;
+}
+
+.chat-input > .icon {
+  color: grey;
+  margin: 0 15px;
 }
