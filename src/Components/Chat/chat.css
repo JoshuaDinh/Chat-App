@@ -1,5 +1,76 @@
 .chat {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 80%;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid rgba(77, 122, 165, 0.17);
+}
+
+.chat-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 22%;
+}
+
+.chat-header-info {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.chat-header-info > h3 {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.chat-header-info > p {
+  color: rgb(128, 128, 128);
+}
+
+.chat-icons {
+  color: rgba(77, 122, 165, 0.966);
+  font-size: 2rem !important;
+}
+
+.chat-body {
+  flex: 1;
+  margin-top: 30px;
+  /* background: url("https://cdn.pixabay.com/photo/2017/06/13/13/51/marble-2398946_960_720.jpg")
+    center no-repeat;
+  background-size: cover;
+  background-color: #ffffff; */
+  /* opacity: 0.15;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #ffffff 17px
+    ),
+    repeating-linear-gradient(#4d7aa555, #4d7aa5); */
+}
+
+.chat-message {
+  position: relative;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(77, 122, 165, 0.17);
+  font-size: 1rem;
+}
+
+.chat-timestamp {
+  margin-left: 10px;
+  font-size: xx-small;
+}
+
+.chat-name {
+  position: absolute;
+  top: -15px;
+  margin-left: 10px;
+  font-size: xx-small;
+  font-weight: 800;
 }

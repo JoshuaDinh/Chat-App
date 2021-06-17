@@ -14,6 +14,10 @@ html {
   box-sizing: inherit;
 }
 
+span {
+  color: black;
+}
+
 body {
   /* background-color: #040714; */
   background-color: rgba(77, 122, 165, 0.17);
