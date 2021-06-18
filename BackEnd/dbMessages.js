@@ -7,4 +7,4 @@ const messageSchema = new mongoose.Schema({
   recieved: Boolean,
 });
 
-module.exports = mongoose.model("messageContent", messageSchema);
+module.exports = mongoose.model("messagecontents", messageSchema);

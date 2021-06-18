@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Messages = require("./dbMessages");
 const Pusher = require("pusher");
+const cors = require("cors");
 
 // initialize app config
 const app = express();
@@ -17,12 +18,15 @@ const pusher = new Pusher({
   useTLS: true,
 });
 
-pusher.trigger("my-channel", "my-event", {
-  message: "hello world",
-});
-
 // middleware
 app.use(express.json());
+app.use(cors());
+
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "**");
+//   res.setHeader("Access-Control-Allow-Headers", "**");
+//   next();
+// });
 
 // DBconfig
 const mongoURI =
@@ -34,10 +38,31 @@ mongoose.connect(mongoURI, {
   useUnifiedTopology: true,
 });
 
-// api routes
-app.get("/", (req, res) => res.status(200).send("hello world"));
+const db = mongoose.connection;
 
-app.get("/messages/sync", (req, res) => {
+db.once("open", () => {
+  console.log("db connected");
+  const msgCollection = db.collection("messagecontents");
+  const changeStream = msgCollection.watch();
+
+  changeStream.on("change", (change) => {
+    if (change.operationType === "insert") {
+      const messageDetails = change.fullDocument;
+      pusher.trigger("messages", "inserted", {
+        name: messageDetails.name,
+        message: messageDetails.message,
+        timestamp: messageDetails.timestamp,
+      });
+    } else {
+      console.error(err.msg);
+    }
+  });
+});
+
+// api routes
+// app.get("/", (req, res) => res.status(200).send("hello world"));
+
+app.get("/api/messages/sync", (req, res) => {
   Messages.find((err, data) => {
     if (err) {
       res.status(500).send(err);
@@ -60,4 +85,4 @@ app.post("/messages/new", (req, res) => {
 });
 
 // listen
-app.listen(port, console.log("we are running on" + port));
+app.listen(port, console.log("we are running on " + port));

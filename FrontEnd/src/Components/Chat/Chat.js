@@ -11,7 +11,7 @@ import MicIcon from "@material-ui/icons/Mic";
 import IconButton from "@material-ui/core/IconButton";
 import ChatMessage from "../ChatMessage/ChatMessage";
 
-const Chat = () => {
+const Chat = ({ messages }) => {
   return (
     <div className="chat">
       <div className="chat-header ">
