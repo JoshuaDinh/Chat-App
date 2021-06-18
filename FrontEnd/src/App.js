@@ -4,7 +4,6 @@ import Pusher from "pusher-js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Chat from "./Components/Chat/Chat";
-import axios from "axios";
 
 const App = () => {
   const [messages, setMessages] = useState([]);
@@ -13,10 +12,10 @@ const App = () => {
     const fetchData = async () => {
       await fetch("/api/messages/sync")
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .then((data) => setMessages(data));
     };
     fetchData();
-  }, [messages]);
+  }, []);
 
   // Listens to changes in the database / real time
   useEffect(() => {
@@ -35,18 +34,16 @@ const App = () => {
   }, [messages]);
 
   return (
-    // <Router>
-    //   <Switch>
-    //     <Route path="/">
-    <div className="App">
-      <div className="app-body">
-        <Sidebar />
-        <Chat messages={messages} />
-      </div>
-    </div>
-    //     </Route>
-    //   </Switch>
-    // </Router>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <div className="App">
+            <Sidebar />
+            <Chat messages={messages} />
+          </div>
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 

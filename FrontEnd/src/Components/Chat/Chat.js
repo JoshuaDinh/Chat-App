@@ -35,7 +35,9 @@ const Chat = ({ messages }) => {
       </div>
 
       <div className="chat-body">
-        <ChatMessage />
+        {messages.map((message) => {
+          return <ChatMessage message={message} />;
+        })}
       </div>
 
       <div className="chat-input">

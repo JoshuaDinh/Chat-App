@@ -10,7 +10,8 @@
 
 .chat-reciever {
   margin-left: auto;
-  background-color: rgba(77, 122, 165, 0.17);
+  background-color: rgba(27, 53, 78, 0.966);
+  color: white;
 }
 
 .chat-timestamp {
@@ -24,4 +25,5 @@
   margin-left: 10px;
   font-size: xx-small;
   font-weight: 800;
+  color: black;
 }
