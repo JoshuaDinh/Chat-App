@@ -1,3 +1,4 @@
 {
+  "jwtSecret" : "_myJwtSecret",
   "mongoURI": "mongodb+srv://admin:j0shuadinh@cluster0.f719t.mongodb.net/Chat-App?retryWrites=true&w=majority"
 }
