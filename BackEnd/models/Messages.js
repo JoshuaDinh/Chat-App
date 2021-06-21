@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
-const messageSchema = new mongoose.Schema({
+const MessageSchema = new mongoose.Schema({
   message: String,
   name: String,
   timestamp: String,
   recieved: Boolean,
 });
 
-module.exports = mongoose.model("messagecontents", messageSchema);
+module.exports = mongoose.model("messagecontents", MessageSchema);
